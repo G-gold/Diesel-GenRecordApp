@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>RECORDS APP</title>
+  </head>
+  <body>
+    <div class="form">
+      <form id="myForm">
+        <div class="title">Deisel & Gen records</div>
+
+        <div class="input-container ic1">
+          <input id="gen1" class="input" type="number" placeholder=" " />
+          <div class="cut"></div>
+          <label for="gen1" class="placeholder">Gen 1</label>
+        </div>
+
+        <div class="input-container ic2">
+          <input id="gen2" class="input" type="number" placeholder=" " />
+          <div class="cut"></div>
+          <label for="gen2" class="placeholder">Gen 2</label>
+        </div>
+
+        <div class="input-container ic1">
+          <input id="tank1" class="input" type="number" placeholder=" " />
+          <div class="cut cut-short"></div>
+          <label for="tank1" class="placeholder">Tank 1</label>
+        </div>
+
+        <div class="input-container ic2">
+          <input id="tank2" class="input" type="number" placeholder=" " />
+          <div class="cut cut-short"></div>
+          <label for="tank2" class="placeholder">Tank 2</label>
+        </div>
+
+        <div class="time-container">
+          <input id="time" class="checkbox" type="checkbox" />
+          <label class="period">Opening reading</label>
+        </div>
+
+        <div class="time-container">
+          <input id="time" class="checkbox" type="checkbox" />
+          <label class="period">Closing reading</label>
+        </div>
+
+        <!-- <button class="send">SEND</button> -->
+        <input class="send btn" type="button" value="SEND" />
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Save Web Form Data to Spreadsheets - Contact Form</title>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></scrip>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/1551/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
+</head>
+<body>
+  <form id="myForm">
+    <label>Full Name</label>
+    <br/>
+    <input name="full_name" />
+    <br/>
+    <label>Email</label>
+    <br/>
+    <input name="email" />
+    <br/>
+    <label>Age</label>
+    <br/>
+    <input type="radio" id="age" name="age" value="18-35" /> 18-35<br/>
+    <input type="radio" id="age" name="age" value="35+" /> 35+<br/>
+    <br/>
+    <label>Message</label>
+    <br/>
+    <textarea name="message">
+    </textarea>
+    <br/>
+    <br/>
+  </form>
+  <button onclick="SubForm()">Submit</button>
+</body>
+</html> -->
