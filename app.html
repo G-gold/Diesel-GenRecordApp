@@ -9,18 +9,26 @@
   </head>
   <body>
     <div class="form">
-      <form id="myForm">
-        <div class="title">Deisel & Gen records</div>
+      <form id="myForm" onsubmit="return false">
+        <div class="title">Deisel & Gen Records</div>
+
+        <div class="time-container">
+          <label for="checkbox"></label>
+          <select name="time" class="checkbox" id="checkbox">
+            <option value="Opening">Opening reading</option>
+            <option value="Closing">Closing reading</option>
+          </select>
+        </div>
 
         <div class="input-container ic1">
           <input id="gen1" class="input" type="number" placeholder=" " />
-          <div class="cut"></div>
+          <div class="cut cut-short"></div>
           <label for="gen1" class="placeholder">Gen 1</label>
         </div>
 
         <div class="input-container ic2">
           <input id="gen2" class="input" type="number" placeholder=" " />
-          <div class="cut"></div>
+          <div class="cut cut-short"></div>
           <label for="gen2" class="placeholder">Gen 2</label>
         </div>
 
@@ -36,15 +44,16 @@
           <label for="tank2" class="placeholder">Tank 2</label>
         </div>
 
-        <div class="time-container">
-          <input id="time" class="checkbox" type="checkbox" />
-          <label class="period">Opening reading</label>
+        <div class="input-container program">
+          <input id="program" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="program" class="placeholder">Program</label>
         </div>
 
-        <div class="time-container">
+        <!--<div class="time-container">
           <input id="time" class="checkbox" type="checkbox" />
           <label class="period">Closing reading</label>
-        </div>
+        </div> -->
 
         <!-- <button class="send">SEND</button> -->
         <input class="send btn" type="button" value="SEND" />

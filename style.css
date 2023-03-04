@@ -1,102 +1,136 @@
 @import url("https://fonts.googleapis.com/css2?family=Labrada&display=swap");
 
 body {
-  --s: 82px; /* control the size */
-  --c1: #b2b2b2;
-  --c2: #ffffff;
-  --c3: #d9d9d9;
-
-  --_g: var(--c3) 0 120deg, #0000 0;
-  background: conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
-    conic-gradient(from 120deg at 50% calc(200% / 3), var(--_g)),
-    conic-gradient(
-      from 60deg at calc(200% / 3),
-      var(--c3) 60deg,
-      var(--c2) 0 120deg,
-      #0000 0
-    ),
-    conic-gradient(from 180deg at calc(100% / 3), var(--c1) 60deg, var(--_g)),
-    linear-gradient(
-      90deg,
-      var(--c1) calc(100% / 6),
-      var(--c2) 0 50%,
-      var(--c1) 0 calc(500% / 6),
-      var(--c2) 0
-    );
-  background-size: calc(1.732 * var(--s)) var(--s);
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  display: grid;
-  /* flex-direction: column; */
-  /* align-items: center; */
-  font-size: 30px;
-  font-family: "Labrada", serif;
-  margin: 80px;
-
+  align-items: center;
+  background-color: #000;
+  display: flex;
   justify-content: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
-label {
-  color: #003300;
-  font-weight: bolder;
-  
-}
-
-input {
-    width: 250px;
+.form {
+  background-color: #15172b;
+  border-radius: 20px;
   box-sizing: border-box;
-  font-family: inherit;
-  font-size: 24px;
-  vertical-align: baseline;
-  font-weight: 400;
-  line-height: 1.29;
-  letter-spacing: 0.16px;
-  border-radius: 0;
-  outline: 2px solid transparent;
-  outline-offset: -2px;
-  text-align: center;
-  /* width: 100%; */
-  height: 40px;
-  border: none;
-  border-bottom: 1px solid #8d8d8d;
-  background-color: #f4f4f4;
-  padding: 0 6px;
-  color: #161616;
-  transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9),
-    outline 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  height: 620px;
+  padding: 20px;
+  width: 320px;
 }
-:focus {
-  outline: 2px solid #004f65;
-  outline-offset: -2px;
+
+.title {
+  color: #f8ff8f;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+}
+
+select {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  margin-top: 20px;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 50px;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 20px;
+}
+
+.ic2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.input {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.cut {
+  background-color: #15172b;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-short {
+  width: 50px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input:focus ~ .placeholder {
+  color: #dc2f55;
 }
 
 .send {
-  margin-top: 15px;
-  margin-left: 20px;
-  width: 200px;
-  display: inline-block;
-  outline: 0;
+  background-color: #08d;
+  border-radius: 12px;
   border: 0;
+  box-sizing: border-box;
+  color: #f8ff8f;
   cursor: pointer;
-  font-weight: 600;
-  color: #fff;
-  font-size: 14px;
-  height: 38px;
-  padding: 8px 24px;
-  border-radius: 50px;
-  background-image: linear-gradient(180deg, #7c8aff, #3c4fe0);
-  box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%),
-    0 1px 3px 0 rgb(93 100 148 / 20%);
-  transition: all 0.2s ease-out;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 25px;
+  /* outline: 0; */
+  text-align: center;
+  width: 100%;
 }
-:hover {
-  box-shadow: 0 8px 22px 0px rgb(37 44 97 / 15%),
-    0 4px 6px 0 rgb(93 100 148 / 20%);
+
+.send:active {
+  background-color: #06b;
 }
+
 
