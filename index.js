@@ -55,7 +55,6 @@ sendBtn.addEventListener("click", () => {
     "%0a" +
     "%0a" +
     "Setup Time: " +
-    timer.values``
-  window.open(whatsappurl)
-  // window.open(whatsappurl, "_blank").focus()
+    timer.values
+  window.open(whatsappurl, "_blank").focus()
 })
